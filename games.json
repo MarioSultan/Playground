@@ -4,5 +4,11 @@
     "description": "¿Puedes encontrar el número secreto con el menor número de intentos?",
     "icon": "🎯",
     "path": "games/adivina-numero/"
+  },
+  {
+    "name": "Códigos IATA",
+    "description": "¿Reconoces los códigos IATA de los aeropuertos más famosos del mundo?",
+    "icon": "✈️",
+    "path": "games/airport-codes/"
   }
 ]

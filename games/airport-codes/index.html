@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#22265a">
+  <title>Airport Codes — Playground</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <main class="game-wrap">
+    <a class="back-link" href="../../">← VOLVER A PLAYGROUND</a>
+
+    <header class="topline">
+      <div class="brand-mark">✈</div>
+      <div>
+        <p class="eyebrow">PLAYGROUND · GEOGRAFÍA</p>
+        <h1>Airport <span>Codes.</span></h1>
+      </div>
+      <div class="iata-stamp">IATA<br><strong>3 LETTERS</strong></div>
+    </header>
+
+    <section id="screen-start" class="panel start-screen">
+      <p class="intro">El mundo tiene miles de aeropuertos. ¿Cuántos de sus códigos conoces?</p>
+      <h2>Elige tu <span>nivel.</span></h2>
+      <div class="difficulty-list" role="group" aria-label="Dificultad">
+        <button class="difficulty selected" data-level="easy" type="button">
+          <span class="level-icon">◉</span><span class="level-copy"><strong>Fácil</strong><small>Los aeropuertos más famosos</small></span><span class="level-count">12 aeropuertos</span>
+        </button>
+        <button class="difficulty" data-level="medium" type="button">
+          <span class="level-icon">◈</span><span class="level-copy"><strong>Medio</strong><small>Grandes hubs internacionales</small></span><span class="level-count">43 aeropuertos</span>
+        </button>
+        <button class="difficulty" data-level="hard" type="button">
+          <span class="level-icon">✳</span><span class="level-copy"><strong>Difícil</strong><small>Una vuelta al mundo sin pistas</small></span><span class="level-count">98 aeropuertos</span>
+        </button>
+      </div>
+      <div class="start-meta"><span>10 PREGUNTAS</span><span>·</span><span>SIN LÍMITE DE TIEMPO</span></div>
+      <button id="start-button" class="primary-button" type="button">Despegar <span>↗</span></button>
+    </section>
+
+    <section id="screen-quiz" class="panel quiz-screen" hidden>
+      <div class="quiz-top">
+        <span id="round-label" class="round-label">PREGUNTA 01 / 10</span>
+        <span id="level-label" class="level-pill">FÁCIL</span>
+      </div>
+      <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+      <div class="score-row"><span>✦ <strong id="score">0</strong> PUNTOS</span><span>RACHA <strong id="streak">0</strong></span></div>
+
+      <div class="airport-card">
+        <div class="airport-sky"><span class="radar radar-one"></span><span class="radar radar-two"></span><span class="plane">✈</span><span class="sky-label">DESTINATION UNKNOWN</span></div>
+        <p id="airport-country" class="country-label">ESPAÑA · EUROPA</p>
+        <h2 id="airport-city">Madrid</h2>
+        <p id="airport-name" class="airport-name">Adolfo Suárez Madrid-Barajas</p>
+        <div class="code-slots" aria-hidden="true"><span>?</span><span>?</span><span>?</span></div>
+      </div>
+
+      <form id="answer-form" class="answer-form" autocomplete="off">
+        <label for="answer">¿Cuál es su código IATA?</label>
+        <div class="answer-row">
+          <input id="answer" name="answer" type="text" maxlength="3" minlength="3" placeholder="ABC" aria-label="Código IATA de tres letras" required>
+          <button class="primary-button submit-button" type="submit">Comprobar <span>↗</span></button>
+        </div>
+      </form>
+      <p id="feedback" class="feedback" aria-live="polite">Introduce las tres letras del código.</p>
+      <div class="quiz-actions"><button id="skip-button" class="text-button" type="button">No lo sé, saltar →</button><button id="next-button" class="primary-button next-button" type="button" hidden>Siguiente <span>→</span></button></div>
+    </section>
+
+    <section id="screen-results" class="panel results-screen" hidden>
+      <div class="result-icon">✈</div>
+      <p class="eyebrow">VUELO COMPLETADO</p>
+      <h2 id="result-title">Buen viaje.</h2>
+      <p id="result-subtitle" class="result-subtitle">Has completado la ronda.</p>
+      <div class="result-score"><strong id="final-score">0</strong><span> PUNTOS</span></div>
+      <div class="result-stats"><div><strong id="correct-count">0/10</strong><small>ACIERTOS</small></div><div><strong id="accuracy">0%</strong><small>PRECISIÓN</small></div><div><strong id="best-streak">0</strong><small>MEJOR RACHA</small></div><div><strong id="personal-record">0</strong><small>RÉCORD</small></div></div>
+      <div class="review-heading"><h3>Tu hoja de ruta</h3><span>RESPUESTAS</span></div>
+      <div id="review-list" class="review-list"></div>
+      <button id="play-again" class="primary-button" type="button">Volver a jugar <span>↗</span></button>
+    </section>
+
+    <footer class="footer-note">PLAYGROUND <span>✳</span> · KNOW THE WORLD</footer>
+  </main>
+</body>
+</html>
