@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#22265a">
+  <title>Periodic Challenge — Playground</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <main class="game-wrap">
+    <a class="back-link" href="../../">← VOLVER A PLAYGROUND</a>
+    <header class="topline">
+      <div class="brand-mark">⚛</div>
+      <div><p class="eyebrow">PLAYGROUND · CIENCIA</p><h1>Periodic <span>Challenge.</span></h1></div>
+      <div class="atom-stamp">118<br><strong>ELEMENTS</strong></div>
+    </header>
+
+    <section id="screen-start" class="panel start-screen">
+      <p class="intro">118 elementos, cientos de símbolos y una tabla que conviene conocer.</p>
+      <h2>Elige tu <span>dificultad.</span></h2>
+      <div class="difficulty-list" role="group" aria-label="Dificultad">
+        <button class="difficulty selected" data-level="easy" type="button"><span class="level-icon">◉</span><span class="level-copy"><strong>Fácil</strong><small>Los primeros 20 elementos</small></span><span class="level-count">20 elementos</span></button>
+        <button class="difficulty" data-level="medium" type="button"><span class="level-icon">◈</span><span class="level-copy"><strong>Medio</strong><small>Elementos 1–56 y 72–86</small></span><span class="level-count">71 elementos</span></button>
+        <button class="difficulty" data-level="hard" type="button"><span class="level-icon">✳</span><span class="level-copy"><strong>Difícil</strong><small>La tabla periódica completa</small></span><span class="level-count">118 elementos</span></button>
+      </div>
+      <h2 class="mode-heading">Modo de <span>juego.</span></h2>
+      <div class="mode-grid" role="group" aria-label="Modo de juego">
+        <button class="mode selected" data-mode="symbol" type="button"><strong>Símbolo</strong><small>¿Qué elemento es Fe?</small></button>
+        <button class="mode" data-mode="number" type="button"><strong>Número</strong><small>¿Qué elemento es el 26?</small></button>
+        <button class="mode" data-mode="name" type="button"><strong>Nombre</strong><small>¿Cuál es el símbolo del hierro?</small></button>
+      </div>
+      <div class="start-meta"><span>10 PREGUNTAS</span><span>·</span><span>4 OPCIONES</span></div>
+      <button id="start-button" class="primary-button" type="button">Empezar <span>↗</span></button>
+    </section>
+
+    <section id="screen-quiz" class="panel quiz-screen" hidden>
+      <div class="quiz-top"><span id="round-label" class="round-label">PREGUNTA 01 / 10</span><span id="level-label" class="level-pill">FÁCIL</span></div>
+      <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+      <div class="score-row"><span>✦ <strong id="score">0</strong> PUNTOS</span><span>RACHA <strong id="streak">0</strong></span></div>
+      <div class="element-card">
+        <div class="element-top"><span id="element-number">26</span><span id="element-category">METAL DE TRANSICIÓN</span></div>
+        <div id="element-prompt" class="element-prompt">Fe</div>
+        <p id="element-hint" class="element-hint">IDENTIFICA EL ELEMENTO</p>
+      </div>
+      <p class="question-label" id="question-label">¿A qué elemento corresponde este símbolo?</p>
+      <div id="options" class="options-grid" role="group" aria-label="Respuestas posibles"></div>
+      <p id="feedback" class="feedback" aria-live="polite">Selecciona una respuesta.</p>
+      <div class="quiz-actions"><span id="streak-note" class="streak-note">+100 PUNTOS POR ACIERTO</span><button id="next-button" class="primary-button next-button" type="button" hidden>Siguiente <span>→</span></button></div>
+    </section>
+
+    <section id="screen-results" class="panel results-screen" hidden>
+      <div class="result-icon">⚛</div><p class="eyebrow">RONDA COMPLETADA</p>
+      <h2 id="result-title">Buen trabajo.</h2><p id="result-subtitle" class="result-subtitle">Has completado la ronda.</p>
+      <div class="result-score"><strong id="final-score">0</strong><span> PUNTOS</span></div>
+      <div class="result-stats"><div><strong id="correct-count">0/10</strong><small>ACIERTOS</small></div><div><strong id="accuracy">0%</strong><small>PRECISIÓN</small></div><div><strong id="best-streak">0</strong><small>MEJOR RACHA</small></div><div><strong id="personal-record">0</strong><small>RÉCORD</small></div></div>
+      <div class="review-heading"><h3>Repasa la tabla</h3><span>RESPUESTAS</span></div><div id="review-list" class="review-list"></div>
+      <button id="play-again" class="primary-button" type="button">Volver a jugar <span>↗</span></button>
+    </section>
+    <footer class="footer-note">PLAYGROUND <span>✳</span> · KNOW YOUR ELEMENTS</footer>
+  </main>
+</body>
+</html>

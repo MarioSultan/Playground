@@ -10,5 +10,11 @@
     "description": "¿Reconoces los códigos IATA de los aeropuertos más famosos del mundo?",
     "icon": "✈️",
     "path": "games/airport-codes/"
+  },
+  {
+    "name": "Periodic Challenge",
+    "description": "Pon a prueba cuánto sabes de los 118 elementos de la tabla periódica.",
+    "icon": "⚛️",
+    "path": "games/periodic-challenge/"
   }
 ]
