@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#22265a">
+  <meta name="description" content="Una colección de juegos pequeños para pasar un buen rato.">
+  <title>Playground — pequeños juegos, grandes ratos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Playground, inicio">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span>playground<span class="brand-period">.</span></span>
+      </a>
+      <span class="topbar-note"><span class="status-dot"></span> UN RINCÓN PARA JUGAR</span>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div class="eyebrow"><span class="eyebrow-line"></span> BIENVENIDO A TU ZONA DE JUEGO</div>
+        <h1>Pequeños juegos.<br><span>Grandes ratos.</span></h1>
+        <p class="intro-copy">Una colección de juegos sencillos para poner a prueba tu ingenio, aprender algo nuevo o, simplemente, desconectar un rato.</p>
+        <div class="intro-meta"><span class="meta-icon">✳</span><span id="game-count">Cargando juegos...</span><span class="meta-divider">/</span><span>Elige uno y empieza</span></div>
+      </section>
+
+      <section class="library" aria-labelledby="library-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">LA COLECCIÓN</p>
+            <h2 id="library-title">Todos los juegos<span class="heading-period">.</span></h2>
+          </div>
+          <span class="section-side-note">HECHOS PARA CURIOSOS <span>↗</span></span>
+        </div>
+        <div id="games-grid" class="games-grid" aria-live="polite">
+          <div class="loading-card"><span class="loader"></span> Preparando la colección...</div>
+        </div>
+        <p id="empty-state" class="empty-state" hidden>Todavía no hay juegos por aquí. ¡Añade el primero!</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="footer-brand">playground<span class="brand-period">.</span></span>
+      <span>Un proyecto para experimentar y divertirse.</span>
+      <span class="footer-symbol">✳</span>
+    </footer>
+  </div>
+</body>
+</html>

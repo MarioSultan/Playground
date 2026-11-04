@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#22265a">
+  <title>Adivina el número — Playground</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <main class="game-wrap">
+    <a class="back-link" href="../../">← VOLVER A PLAYGROUND</a>
+    <section class="game-panel">
+      <div class="game-icon">🎯</div>
+      <p class="eyebrow">JUEGO 01 · LÓGICA</p>
+      <h1>Adivina el<br><span>número.</span></h1>
+      <p class="subtitle">Estoy pensando en un número entre 1 y 100. ¿Serás capaz de encontrarlo?</p>
+      <form id="guess-form" class="guess-form">
+        <label for="guess">Tu apuesta</label>
+        <div class="input-row">
+          <input id="guess" type="number" min="1" max="100" placeholder="¿Qué número?" required autocomplete="off" inputmode="numeric">
+          <button type="submit">Probar <span>↗</span></button>
+        </div>
+      </form>
+      <p id="message" class="message" aria-live="polite">Introduce un número para empezar.</p>
+      <div class="stats"><div><strong id="attempts">0</strong><span>INTENTOS</span></div><div><strong>1–100</strong><span>RANGO</span></div></div>
+      <button id="reset" class="reset-button" type="button">↻ Empezar de nuevo</button>
+    </section>
+    <p class="footer-note">UN JUEGO DE PLAYGROUND <span>✳</span></p>
+  </main>
+</body>
+</html>
