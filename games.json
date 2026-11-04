@@ -16,5 +16,11 @@
     "description": "Pon a prueba cuánto sabes de los 118 elementos de la tabla periódica.",
     "icon": "⚛️",
     "path": "games/periodic-challenge/"
+  },
+  {
+    "name": "Physics Challenge",
+    "description": "Preguntas de razonamiento físico de nivel universitario: 4 cursos, 32 asignaturas y más de 600 cuestiones.",
+    "icon": "∑",
+    "path": "games/pysics-reasoning/"
   }
 ]
