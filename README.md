@@ -2,6 +2,10 @@
 
 Una colección de minijuegos estáticos publicada con GitHub Pages.
 
+Para probarlo, puedes usar el siguiente enlace:
+
+[**Acceder a *Playground***](https://mariosultan.github.io/Playground)
+
 ## Añadir un juego
 
 1. Crea una carpeta dentro de `games/`. El nombre de la carpeta será su dirección web, por ejemplo `games/mi-juego/`.
