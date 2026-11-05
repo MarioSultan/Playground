@@ -21,6 +21,12 @@
     "name": "Physics Challenge",
     "description": "Preguntas de razonamiento físico de nivel universitario: 4 cursos, 32 asignaturas y más de 600 cuestiones.",
     "icon": "∑",
-    "path": "games/physics-reasoning/"
+    "path": "games/pysics-reasoning/"
+  },
+  {
+    "name": "Math Challenge",
+    "description": "640 preguntas de razonamiento matemático universitario: 4 cursos y 32 asignaturas.",
+    "icon": "∂",
+    "path": "games/math-reasoning/"
   }
 ]
